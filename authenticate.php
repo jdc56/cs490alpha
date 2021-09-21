@@ -21,7 +21,7 @@ $username = "";
 $pw = "";
 
 // SQL Query to test database user fetch
-$sql = 'SELECT Username, Password, Admin FROM users ORDER BY Username';
+$sql = 'SELECT Username, Password, Admin FROM users ORDER BY Username;';
 foreach ($pdo->query($sql) as $row) 
 {
 print $row['Username'] . " ";
