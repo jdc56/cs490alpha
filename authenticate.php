@@ -21,11 +21,14 @@ $pw = "";
 
 // SQL Query to test database user fetch
 $sql = 'SELECT Username, "Password", "Admin" FROM users ORDER BY Username;';
-foreach ($conn->query($sql) as $row) 
-{
-echo "User: " . $row['Username'] . " ";
-echo "Pass: " . $row['Password'] . " ";
-echo "Is Admin: " . $row['Admin'] . "<br/>";
+$res = pg_query($conn, $sql);
+if (!$res) {
+  echo "An error occurred.\n";
+  exit;
 }
+while ($row = pg_fetch_row($result)) {
+    echo "User: $row[1]  Pass: $row[2] Is Admin: $row[3]";
+    echo "<br />\n";
+  }
 
 ?>
