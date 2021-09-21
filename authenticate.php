@@ -20,12 +20,12 @@ $username = "";
 $pw = "";
 
 // SQL Query to test database user fetch
-$sql = 'SELECT Username, Password, Admin FROM users ORDER BY Username;';
+$sql = 'SELECT Username, "Password", "Admin" FROM users ORDER BY Username;';
 foreach ($conn->query($sql) as $row) 
 {
-print $row['Username'] . " ";
-print $row['Password'] . " ";
-print $row['Admin'] . "<br/>";
+echo "User: " . $row['Username'] . " ";
+echo "Pass: " . $row['Password'] . " ";
+echo "Is Admin: " . $row['Admin'] . "<br/>";
 }
 
 ?>
