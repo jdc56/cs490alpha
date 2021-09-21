@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <form action="authenticate.php" method="post">
+    <form action="/auth/authenticate.php" method="post">
         <div class="login">
             <h1>Login</h1>
             <label for="user">Username:</label>
