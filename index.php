@@ -33,7 +33,7 @@ try {$db = parse_url(getenv("DATABASE_URL"));
         ltrim($db["path"], "/")
     ));
     $conn = pg_connect(getenv("DATABASE_URL"));
-    echo "Successfully connected to database. <br/>";
+    echo "Successfully connected to database " . $db . "<br/>";
 }catch (PDOException $e) {
     echo "Error : " . $e->getMessage() . "<br/>";
     die();
