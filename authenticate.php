@@ -19,6 +19,7 @@ try {$db = parse_url(getenv("DATABASE_URL"));
 $username = "";
 $pw = "";
 
+/*
 // SQL Query to test database user fetch
 $sql = 'SELECT Username, "Password", "Admin" FROM users ORDER BY Username;';
 $res = pg_query($conn, $sql);
@@ -30,5 +31,7 @@ while ($row = pg_fetch_row($result)) {
     echo "User: $row[1]  Pass: $row[2] Is Admin: $row[3]";
     echo "<br />\n";
   }
+  
+*/
 
 ?>
