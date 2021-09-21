@@ -23,29 +23,15 @@ $pw = "";
 
 // SQL Query to test database user fetch
 $sql = 'SELECT Username, "Password", "Admin" FROM users ORDER BY Username;';
-$res = pg_query($conn, $sql);
-if (!$res) {
-  echo "An error occurred.<br/>";
-  exit;
+$res = $pdo->query($sql);
+if(!$res) {
+  echo "Query not executed. <br/>";
 }
 else {
-    echo "Query executed<br/>";
-    if (pg_num_rows($result) == 0) {
-        echo "0 records";
-    }
-       else {
-        while ($row = pg_fetch_array($result)) {
-          //do stuff with $row
-          echo "User: $row[1]  Pass: $row[2] Is Admin: $row[3] <br/>";
-        }
-    }
-}
-/*
-while ($row = pg_fetch_row($result)) {
-    echo "User: $row[1]  Pass: $row[2] Is Admin: $row[3]";
-    echo "<br />\n";
+  while ($row = $res->fetch()) {
+    echo "User: " . $row['Username'] . "\nPass: " . $row['Password'] . "\nIs Admin: " . $row['Admin'] . "<br/>";
   }
-  
-*/
+}
+
 
 ?>
