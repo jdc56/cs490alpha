@@ -1,3 +1,4 @@
+<?php include('authenticate.php') ?>
 <!DOCTYPE html>
 <html>
 
@@ -6,7 +7,7 @@
 </head>
 
 <body>
-    <form action="" method=""> <!-- insert authenticate.php and method --> 
+    <form action="authenticate.php" method="post">
         <div class="login">
             <h1>Login</h1>
             <label for="user">Username:</label>
@@ -23,19 +24,5 @@
 </html>
 
 <?php 
-try {$db = parse_url(getenv("DATABASE_URL"));
-    $pdo = new PDO("pgsql:" . sprintf(
-        "host=%s;port=%s;user=%s;password=%s;dbname=%s",
-        $db["host"],
-        $db["port"],
-        $db["user"],
-        $db["pass"],
-        ltrim($db["path"], "/")
-    ));
-    $conn = pg_connect(getenv("DATABASE_URL"));
-    echo "Successfully connected to database " . $db . "<br/>";
-}catch (PDOException $e) {
-    echo "Error : " . $e->getMessage() . "<br/>";
-    die();
-}
+
 ?>
