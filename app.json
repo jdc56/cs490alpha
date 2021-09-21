@@ -1,6 +1,12 @@
 {
+<<<<<<< HEAD
   "name": "Start on Heroku: PHP",
   "description": "A barebones PHP app that makes use of the Silex web framework",
   "repository": "https://github.com/heroku/php-getting-started",
+=======
+  "name": "Login page",
+  "description": "CS490 Alpha",
+  "repository": "https://github.com/jdc56/cs490alpha",
+>>>>>>> 1909f581a84865b78272f84959d0292b11d8848a
   "addons": []
 }

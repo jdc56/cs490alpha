@@ -1,5 +1,6 @@
 {
   "require" : {
+<<<<<<< HEAD
     "silex/silex": "^2.0.4",
     "monolog/monolog": "^1.22",
     "twig/twig": "^2.0",
@@ -7,5 +8,9 @@
   },
   "require-dev": {
     "heroku/heroku-buildpack-php": "*"
+=======
+  },
+  "require-dev": {
+>>>>>>> 1909f581a84865b78272f84959d0292b11d8848a
   }
 }
